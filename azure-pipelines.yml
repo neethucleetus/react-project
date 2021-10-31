@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: windows-latest
 
 stages:
 - stage: Build
@@ -19,7 +19,7 @@ stages:
   jobs:
   - job: TestJob
     steps:
-    - bash: 'npm test'
+    - bash:  'npm test'
 - stage: Deliver
   jobs:
   - job: DeliverJob
