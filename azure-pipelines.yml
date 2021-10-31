@@ -15,6 +15,11 @@ stages:
   - job: BuildJob
     steps:
     - bash: 'npm install'
+- stage: Test
+  jobs:
+  - job: TestJob
+    steps:
+    - bash: 'npm test'
 
 - stage: Deliver
   jobs:
