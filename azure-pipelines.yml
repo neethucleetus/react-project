@@ -14,15 +14,15 @@ stages:
   jobs:
   - job: BuildJob
     steps:
-    - bash: 'npm install'
+    - bash: 'npm install react-scripts'
 - stage: Test
   jobs:
   - job: TestJob
     steps:
-    - bash: 'npm test'
+    - bash: 'npm test react-scripts'
 
 - stage: Deliver
   jobs:
   - job: DeliverJob
     steps:
-    - bash: 'npm run build'   
+    - bash: 'npm run build react-scripts'   
